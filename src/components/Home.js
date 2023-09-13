@@ -80,7 +80,7 @@ export const Home = () => {
                     <motion.td initial={{ opacity: 0, y: 0, x:-500}} animate={controls} className="dark:text-[#f5f1ea] relative top-10 w-auto [text-shadow:0px_4px_4px_#00000040] [font-family:'Inter-Bold',_Helvetica] font-bold text-[#3a3131] text-[94px] tracking-[0] leading-none" colSpan ="2">FULL-STACK</motion.td>
                     <motion.td className="z-10 relative top-9 w-[45%]" colSpan="2">
                         <motion.div initial={{ opacity: 0, y: 0, x:-250 }} animate={controls} className=" w-full flex items-center justify-evenly">
-                            <a href="https://www.linkedin.com/in/joaogabrielpitol/" className="dark:fill-[#FECE54] dark:hover:fill-[#665C9F] fill-[#665C9F] hover:fill-[#FECE54] hover:scale-110 transition-all"target="_blank">
+                            <a href="https://www.linkedin.com/in/joaogabrielpitol/" rel="noreferrer" className="dark:fill-[#FECE54] dark:hover:fill-[#665C9F] fill-[#665C9F] hover:fill-[#FECE54] hover:scale-110 transition-all"target="_blank">
                                 <svg width="70px" height="70px" viewBox="0 0 24 24" className="animation-delay-500 animate-[float_3s_ease-in-out_infinite] hover:animate-[float_0.7s_ease-in-out_infinite]">
                                 <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"/>
                                 <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"/>
@@ -88,7 +88,7 @@ export const Home = () => {
                                 <path fillRule="evenodd"  d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"/>
                                 </svg>
                             </a>
-                            <a href="https://github.com/uPistola" className="dark:fill-[#FECE54] dark:hover:fill-[#665C9F] fill-[#665C9F] hover:fill-[#FECE54] hover:scale-110 transition-all" target="_blank">
+                            <a href="https://github.com/uPistola" rel="noreferrer" className="dark:fill-[#FECE54] dark:hover:fill-[#665C9F] fill-[#665C9F] hover:fill-[#FECE54] hover:scale-110 transition-all" target="_blank">
                                 <svg width="70px" height="70px" viewBox="0 0 20 20" className="animation-delay-1000 animate-[float_3s_ease-in-out_infinite] hover:animate-[float_0.7s_ease-in-out_infinite]">
                                     <g id="Page-1" stroke="none" strokeWidth="1" fillRule="evenodd">
                                     <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" >

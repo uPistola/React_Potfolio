@@ -12,7 +12,7 @@ useEffect(() => {
       console.log("True");
       mainControls.start("visible");
     }
-},[isInView]);
+});
 
   return (
     <div ref={ref}>
