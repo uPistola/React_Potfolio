@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from 'framer-motion';
-import { useTheme } from "../addons/UseTheme";
+import { useTheme } from "../addons/useTheme";
 
 export const Home = () => {
 
-    const [loaded, setLoaded] = useState(false);
     const controls = useAnimation();
     const { theme, setTheme } = useTheme();
+
+    const birthDate = new Date(2004, 0, 2);
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+  
+    const isBeforeBirthday = 
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate());
+  
+    if (isBeforeBirthday) {
+      age--;
+    }
 
     useEffect(() => {
         
@@ -16,7 +28,6 @@ export const Home = () => {
         x: 0,
         transition: { duration: 2.75, staggerChildren: 0.2 },
         });
-        setLoaded(true);
     }, [controls]);
     
     const [copyValue] = useState('pitoljoaogabriel@gmail.com');
@@ -77,7 +88,7 @@ export const Home = () => {
                     <motion.td initial={{ opacity: 0, y: 0, x:-300}} animate={controls} className="dark:text-[#9E9696] relative top-12 [text-shadow:0px_4px_4px_#00000040] [font-family:'Inter-ExtraBold',_Helvetica] font-extrabold text-[#7c7878] text-[16px] tracking-[0] leading-[normal]" colSpan="4">Oi ✋ sou o João</motion.td>
                 </motion.tr>
                 <motion.tr>    
-                    <motion.td initial={{ opacity: 0, y: 0, x:-500}} animate={controls} className="dark:text-[#f5f1ea] relative top-10 w-auto [text-shadow:0px_4px_4px_#00000040] [font-family:'Inter-Bold',_Helvetica] font-bold text-[#3a3131] text-[94px] tracking-[0] leading-none" colSpan ="2">FULL-STACK</motion.td>
+                    <motion.td initial={{ opacity: 0, y: 0, x:-500}} animate={controls} className="dark:text-[#f5f1ea] relative top-10 w-auto [text-shadow:0px_4px_4px_#00000040] [font-family:'Inter-Bold',_Helvetica] font-bold text-[#3a3131] text-[94px] tracking-[0] leading-none pl-[0.4rem]" colSpan ="2">FRONT-END</motion.td>
                     <motion.td className="z-10 relative top-9 w-[45%]" colSpan="2">
                         <motion.div initial={{ opacity: 0, y: 0, x:-250 }} animate={controls} className=" w-full flex items-center justify-evenly">
                             <a href="https://www.linkedin.com/in/joaogabrielpitol/" rel="noreferrer" className="dark:fill-[#FECE54] dark:hover:fill-[#665C9F] fill-[#665C9F] hover:fill-[#FECE54] hover:scale-110 transition-all"target="_blank">
@@ -123,7 +134,7 @@ export const Home = () => {
                 </motion.tr>
                 <motion.tr>
                     <motion.td initial={{ opacity: 0, y: 0, x:-300}} animate={controls} className=" dark:text-[#9E9696] relative left-full flex justify-end [text-shadow:0px_4px_4px_#00000040] [font-family:'Inter-ExtraBold',_Helvetica] font-extrabold text-[#7c7878] text-[20px] tracking-[0] leading-[normal]" colSpan="4">
-                                Tenho 19 anos e sou um proativo&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estudante de Ciência da Computação</motion.td>
+                                Tenho {age} anos e sou um proativo&nbsp;<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estudante de Ciência da Computação</motion.td>
                 </motion.tr>
                 </tbody>
             </motion.table>

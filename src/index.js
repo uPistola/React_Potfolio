@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Work from './components/Work';
 import { Home } from './components/Home';
 import Particle from './addons/Particles';
-import ThemeContextProvider from './addons/UseTheme';
+import ThemeContextProvider from './addons/useTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

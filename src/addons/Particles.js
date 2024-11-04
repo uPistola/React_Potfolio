@@ -1,4 +1,3 @@
-import { Container } from "postcss";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 function Particle() {
@@ -38,7 +37,7 @@ function Particle() {
                             quantity: 4,
                         },
                         repulse: {
-                            distance: 70,
+                            distance: 25,
                             duration: 0.5,
                         },
                     },

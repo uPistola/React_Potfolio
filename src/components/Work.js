@@ -15,7 +15,7 @@ const Work = () => {
                     <p className="w [font-family:'Inter-Bold',_Helvetica] font-medium [text-shadow:0px_4px_4px_#00000040] dark:text-[#f5f1ea] text-[22px] text-left tracking-[0] leading-[normal]">
                         <span className="">
                             Me chamo João Gabriel Pitol e sempre fui apaixonado pela tecnologia, a vontade de conhecer os limites da
-                            programação me entusiasma a cada dia.
+                            programação me entusiasmam a cada dia.
                             Em 2022 cheguei em Curitiba e comecei a cursar Ciência da Computação na PUCPR, e agora estando na metade do curso, me dedico a
                             linguagens como,{" "}
                         </span>
