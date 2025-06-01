@@ -7,15 +7,12 @@ export default function ThemeContextProvider({ children }) {
     localStorage.getItem("theme") !== "dark" ? "light" : "dark"
   );
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    const removeOldTheme = theme === "dark" ? "light" : "dark";
+useEffect(() => {
+  const root = window.document.documentElement;
+  root.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+}, [theme]);
 
-    root.classList.remove(removeOldTheme);
-    root.classList.add(theme);
-
-    localStorage.setItem("theme", theme);
-  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

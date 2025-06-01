@@ -5,12 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import Work from './components/Work';
 import { Home } from './components/Home';
 import Particle from './addons/Particles';
-import ThemeContextProvider from './addons/useTheme';
+import ThemeContextProvider from './addons/UseTheme';
+import CustomCursor from './addons/CustomCursor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
+      <CustomCursor />
       <Particle />
       <Home />
       <Work />

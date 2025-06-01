@@ -1,15 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode:"class",
+  darkMode: ['class', '[data-theme="dark"]'], // ✅ Habilita suporte ao atributo data-theme
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   variants: {
-    fill: ['hover', 'focus'] 
+    fill: ['hover', 'focus'],
   },
   plugins: [
-      require("tailwindcss-animation-delay"),
+    require("tailwindcss-animation-delay"),
   ],
-}
+};
