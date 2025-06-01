@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import { motion, useAnimation } from 'framer-motion';
-import ThemeToggle from "../addons/ThemeToggler";
 
-export const Home = () => {
+export const Home = forwardRef((props, ref) => {
 
     const controls = useAnimation();
 
@@ -36,12 +35,9 @@ export const Home = () => {
         link.click();
       };
       
-
     return (
-
-        <section>
-            <div className=" w-full h-screen theme-bg flex justify-center items-center">
-                <ThemeToggle />
+        <section ref={ref}>
+            <div className=" w-full h-screen theme-bg flex justify-center items-center bg-[#f5f1ea] dark:bg-[#3a3131]">
                 <motion.table className="">
                     <tbody>
                         <motion.tr>
@@ -108,4 +104,4 @@ export const Home = () => {
             </div>
         </section>
     );
-};
+});
