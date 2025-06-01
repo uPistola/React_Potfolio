@@ -70,37 +70,10 @@ function App() {
     }
   }, []);
 
-  function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  }
-
   /**
    * @param {number} targetY - número de pixels no topo da página aonde queremos ir (window.scrollY)
    * @param {number} duration - duração total da animação em milissegundos (ex: 700)
    */
-  function smoothScrollTo(targetY, duration = 700) {
-    const startY = window.scrollY;           // posição inicial atual da janela
-    const change = targetY - startY;         // distância que ainda falta percorrer
-    const startTime = performance.now();     // momento em que a animação começa (timestamp alto-resolução)
-  
-    function animate(currentTime) {
-      const elapsed = currentTime - startTime;         // quanto tempo já passou desde o início
-      const nextY = easeInOutQuad(elapsed, startY, change, duration);
-  
-      window.scrollTo(0, nextY);
-  
-      if (elapsed < duration) {
-        requestAnimationFrame(animate);
-      } else {
-        window.scrollTo(0, targetY);
-      }
-    }
-  
-    requestAnimationFrame(animate);
-  }
 
   return (
     <ThemeContextProvider>

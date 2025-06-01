@@ -15,7 +15,7 @@ useEffect(() => {
 });
 
   return (
-    <div ref={ref}>
+    <div className="h-full" ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, x: -75 },
