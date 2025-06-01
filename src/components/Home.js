@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from 'framer-motion';
-import { useTheme } from "../addons/useTheme";
 import ThemeToggle from "../addons/ThemeToggler";
 
 export const Home = () => {
